@@ -1,0 +1,9 @@
+Install WebApi-Cors
+	Install-Package Microsoft.AspNet.WebApi.Cors
+
+Nuget package
+	Microsoft.Owin
+	Microsoft.Owin.Host.SystemWeb
+	Microsoft.Owin.Security.OAuth
+	Microsoft.Owin.Security
+	Microsoft.AspNet.Identity.Owin
