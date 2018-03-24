@@ -90,7 +90,6 @@
     <Content Include="app\components\home\index.html" />
     <Content Include="app\components\login\index.html" />
     <Content Include="app\components\login\LoginCtrl.js" />
-    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="index.html" />
     <Content Include="app\assests\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="app\assests\bootstrap\js\bootstrap.js" />
@@ -125,7 +124,6 @@
     <Folder Include="app\common\directives\" />
     <Folder Include="app\common\filters\" />
     <Folder Include="app\shared\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
