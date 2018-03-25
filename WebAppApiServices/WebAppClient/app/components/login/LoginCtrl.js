@@ -10,6 +10,7 @@
         $scope.password = "";
         $scope.userDisplayName = "";
         $scope.isAuthenticated = true;
+
         $scope.logout = function () {
 
         };
@@ -38,9 +39,9 @@
                         else {
 
                             $scope.isAuthenticated = true;
-                            sessionStorage.setItem('userName', $scope.userName)
-                            sessionStorage.setItem('accessToken', resp.data.access_token)
-                            sessionStorage.setItem('userName', $scope.userName)
+                            sessionStorage.setItem('userName', $scope.userName);
+                            sessionStorage.setItem('accessToken', resp.data.access_token);
+                            sessionStorage.setItem('userName', $scope.userName);
                             $state.go('home');
                         }
                     } else {

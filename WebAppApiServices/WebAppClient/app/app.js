@@ -23,6 +23,16 @@
                 templateUrl: '/app/components/home/index.html',
                 controller: 'HomeCtrl'
             })
+            .state('contact', {
+                url: '/contact',
+                templateUrl: '/app/components/contact/index.html',
+                controller: 'ContactCtrl'
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: '/app/components/about/index.html',
+                controller: 'AboutCtrl'
+            })
             .state('login', {
                 url: '/account/login',
                 templateUrl: '/app/components/login/index.html',
@@ -30,9 +40,9 @@
             });
     }]);
 
-    app.config(['$httpProvider', function ($httpProvider) {
-        $httpProvider.interceptors.push('AuthInterceptor');
-    }]);
+    //app.config(['$httpProvider', function ($httpProvider) {
+    //    $httpProvider.interceptors.push('AuthInterceptor');
+    //}]);
 
     app.config(['$qProvider', function ($qProvider) {
         $qProvider.errorOnUnhandledRejections(false);
