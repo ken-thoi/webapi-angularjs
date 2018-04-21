@@ -1,28 +1,47 @@
 ﻿(function (app) {
+    "use strict";
 
-    'use strict';
+    // factory EmployeeService
+    // inject appSetting, $http, $q objects
+    app.factory("EmployeeService", [
+        "appSetting",
+        "$http",
+        "$q",
+        EmployeeService
+    ]);
 
-    app.factory("EmployeeService", ["$http", "appSetting", "$q", EmployeeService]);
-
-    function EmployeeService($http, appSetting, $q) {
+    // Get all employees api
+    function EmployeeService(appSetting, $http, $q) {
 
         this.GetEmployees = function () {
+            debugger;
             var deffered = $q.defer();
 
-            var query = $http.get(appSetting.apiBaseUrl + "api/employee/getemployees");
+            var query = $http.get(
+                appSetting.apiBaseUrl + "api/employee/getemployees"
+            );
 
-            return query.then(function (response) {
-                deffered.resolve(response.data);
-                return deffered.promise;
-            }, function (response) {
-                deffered.reject(response);
-                return deffered.promise;
-            });
+            var result;
+
+            return query.then(
+                function (response) {   // promise by deffered
+                    debugger;
+                    deffered.resolve(response.data);
+                    result = deffered.promise;
+                    return result;
+                },
+                function (response) {   // reject by deffered (error)
+                    debugger;
+                    deffered.reject(response);
+                    result = deffered.promise;
+                    return result;
+                }
+            );
         };
 
+        // result object
         return {
             GetEmployees: this.GetEmployees
-        }
-    };
-
-})(angular.module("kenApp"));  
+        };
+    }
+})(angular.module("kenApp"));

@@ -9,7 +9,7 @@ namespace WebAppApiServices.Controllers
     public class EmployeeController : ApiController
     {
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public HttpResponseMessage GetEmployees()
         {
             using (var db = new AppDbContext())

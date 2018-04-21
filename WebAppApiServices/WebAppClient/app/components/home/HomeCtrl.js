@@ -8,6 +8,7 @@
         $scope.getAllEmployees = function () {
             EmployeeService.GetEmployees()
                 .then(function (result) {
+                    debugger;
                     $scope.employees = result;
                 }, function (error) {
                     console.log("Bad Request Process");
@@ -20,4 +21,4 @@
 
         $scope.init();
     };
-})(angular.module("kenApp")); 
+})(angular.module("kenApp"));

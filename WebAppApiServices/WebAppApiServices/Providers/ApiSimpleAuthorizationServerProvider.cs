@@ -10,7 +10,7 @@ using WebAppApiServices.Models;
 namespace WebAppApiServices.Providers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    //[EnableCors(origins: "http://mywebclient.azurewebsites.net", headers: "*", methods: "*")]
+    //[EnableCors(origins: "http://localhost:18016", headers: "*", methods: "*")]
     public class ApiSimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
